@@ -1,0 +1,107 @@
+:root {
+  --brand: #0ea5e9;
+  --accent: #22c55e;
+}
+
+.glass {
+  background: rgba(255, 255, 255, 0.8);
+  backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.5);
+}
+/* Add this to your App.css or create a new LandingPage.css */
+
+/* Circular progress chart */
+.circular-chart {
+  display: block;
+  margin: 10px auto;
+  max-width: 100%;
+  max-height: 100%;
+}
+
+.circle-bg {
+  fill: none;
+  stroke: #d1fae5;
+  stroke-width: 3.8;
+}
+
+.circle {
+  fill: none;
+  stroke-width: 3.8;
+  stroke-linecap: round;
+  stroke: #10b981;
+  animation: progress 1s ease-out forwards;
+}
+
+.percentage {
+  fill: #10b981;
+  font-size: 0.5em;
+  font-weight: bold;
+  text-anchor: middle;
+}
+
+@keyframes progress {
+  0% {
+    stroke-dasharray: 0 100;
+  }
+}
+
+/* Add smooth scrolling */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Animation for stats counter */
+@keyframes countUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.stats-counter {
+  animation: countUp 0.8s ease-out forwards;
+}
+
+/* Add this to your Tailwind config if not already present */
+/*
+module.exports = {
+  theme: {
+    extend: {
+      colors: {
+        green: {
+          50: '#f0fdf4',
+          100: '#dcfce7',
+          200: '#bbf7d0',
+          300: '#86efac',
+          400: '#4ade80',
+          500: '#22c55e',
+          600: '#16a34a',
+          700: '#15803d',
+          800: '#166534',
+          900: '#14532d',
+        }
+      }
+    }
+  }
+}
+*/
+
+/* Fade in animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fade-in {
+  animation: fadeIn 1s ease-out;
+}
